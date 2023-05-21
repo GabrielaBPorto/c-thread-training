@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+// #define vectorSize 32
+#define vectorSize 134217728
+
+int A[vectorSize], B[vectorSize];
+
+int main(int argc, char const *argv[]) {
+
+  for (int j = 0; j < vectorSize; j++)
+	{
+		A[j] = B[j] = j;
+	}
+  long double soma;
+  for (size_t i = 0; i < vectorSize; i++) {
+    soma += A[i] + A[i];
+  }
+  printf("%Lf", soma );
+  return 0;
+}
